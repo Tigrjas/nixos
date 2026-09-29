@@ -1,0 +1,27 @@
+// ────────────── Output Configuration ──────────────
+// You can run `niri msg outputs` to get the correct name for your displays.
+// You will have to remove "/-" and edit it before it takes effect.
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
+
+
+
+output "Samsung Electric Company SAMSUNG 0x00000001" {
+    mode "1920x1080@60.000"
+    scale 1.25
+    transform "normal"
+    position x=0 y=288
+}
+
+output "LG Electronics LG HDR WQHD 110NTSU4H038" {
+    mode "3440x1440@99.982"
+    scale 1
+    transform "normal"
+    position x=1536 y=0
+}
+
+output "Dell Inc. S2318HN/NX NHD1J71M0GTT" {
+    mode "1920x1080@60.000"
+    scale 1
+    transform "normal"
+    position x=4976 y=325
+}

@@ -1,0 +1,37 @@
+    window-rule {
+        geometry-corner-radius 12 // How rounded the window corners you want
+        clip-to-geometry true
+    }
+
+    layer-rule {
+        match namespace="^noctalia-wallpaper*"
+        place-within-backdrop true
+    }
+
+
+	window-rule {
+        match app-id="kitty" is-focused=true
+        opacity 0.85
+        draw-border-with-background false
+    }
+    window-rule {
+        match app-id="kitty" is-focused=false
+        opacity 0.70
+    }
+
+    window-rule {
+        match app-id="com.super_productivity.SuperProductivity" at-startup=true
+        open-on-output "Dell Inc. S2318HN/NX NHD1J71M0GTT"
+    }
+
+    window-rule {
+        match app-id="zen" at-startup=true
+        open-on-output "Dell Inc. S2318HN/NX NHD1J71M0GTT"
+    }
+
+    window-rule {
+        match app-id="obsidian" at-startup=true
+        open-on-output "Dell Inc. S2318HN/NX NHD1J71M0GTT"
+    }
+
+    

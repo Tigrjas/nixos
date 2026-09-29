@@ -1,0 +1,10 @@
+// ────────────── Startup Applications ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
+
+    spawn-at-startup "noctalia"
+
+    // Personal Applications
+    spawn-at-startup "flatpak" "run" "com.super_productivity.SuperProductivity"
+    spawn-at-startup "obsidian"
+    spawn-at-startup "zen-browser" "--new-window" "https://calendar.google.com/calendar/u/0/r"
+    
