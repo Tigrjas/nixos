@@ -37,5 +37,15 @@
   xdg.configFile."noctalia/config.toml".source =
     ./noctalia/config.toml;
 
+  xdg.configFile."fish" = {
+    source = ./fish;
+    recursive = true;
+  };
+
+  xdg.configFile."fastfetch" = {
+    source = ./fastfetch;
+    recursive = true;
+  };
+
   home.stateVersion = "26.05";
 }
