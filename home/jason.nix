@@ -30,5 +30,8 @@
     recursive = true;
   };
 
+  xdg.configFile."noctalia/config.toml".source =
+    ./noctalia/config.toml;
+
   home.stateVersion = "26.05";
 }
