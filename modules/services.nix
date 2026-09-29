@@ -1,8 +1,25 @@
 { pkgs, ... }:
 
 {
+  # Printing
   services.printing.enable = true;
 
+  # Network printer/scanner discovery
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    openFirewall = true;
+  };
+
+  # Scanner support
+  hardware.sane = {
+    enable = true;
+    extraBackends = [
+      pkgs.sane-airscan
+    ];
+  };
+
+  # Other services
   services.flatpak.enable = true;
 
   services.syncthing = {

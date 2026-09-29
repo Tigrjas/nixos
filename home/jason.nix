@@ -1,6 +1,10 @@
 { config, pkgs, inputs, ... }:
 
 {
+  imports = [
+    inputs.zen-browser.homeModules.beta
+  ];
+
   home.username = "jason";
   home.homeDirectory = "/home/jason";
 
@@ -17,16 +21,16 @@
     };
   };
 
-  xdg.configFile."kitty/kitty.conf".source =
-    ./kitty/kitty.conf;
-    
-  xdg.configFile."niri" = {
-    source = ./niri;
-    recursive = true;
+  programs.zen-browser = {
+    enable = true;
+    setAsDefaultBrowser = true;
   };
 
-  xdg.configFile."fish" = {
-    source = ./fish;
+  xdg.configFile."kitty/kitty.conf".source =
+    ./kitty/kitty.conf;
+
+  xdg.configFile."niri" = {
+    source = ./niri;
     recursive = true;
   };
 

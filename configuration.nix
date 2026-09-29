@@ -50,6 +50,8 @@
       "networkmanager"
       "wheel"
       "docker"
+      "scanner"
+      "lp"
     ];
   };
 
