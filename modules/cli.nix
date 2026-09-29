@@ -7,6 +7,7 @@
     btop
     fastfetch
     micro
+    pciutils
     restic
     rsync
     wget
