@@ -14,6 +14,7 @@
     ./modules/development.nix
     ./modules/services.nix
     ./modules/virtualization.nix
+    ./modules/gaming.nix
   ];
 
   nix.settings.experimental-features = [

@@ -1,17 +1,18 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
-  # Printing
+  imports = [
+    inputs.nix-flatpak.nixosModules.nix-flatpak
+  ];
+
   services.printing.enable = true;
 
-  # Network printer/scanner discovery
   services.avahi = {
     enable = true;
     nssmdns4 = true;
     openFirewall = true;
   };
 
-  # Scanner support
   hardware.sane = {
     enable = true;
     extraBackends = [
@@ -19,8 +20,20 @@
     ];
   };
 
-  # Other services
-  services.flatpak.enable = true;
+  services.flatpak = {
+    enable = true;
+
+    remotes = [
+      {
+        name = "flathub";
+        location = "https://dl.flathub.org/repo/flathub.flatpakrepo";
+      }
+    ];
+
+    packages = [
+      "com.super_productivity.SuperProductivity"
+    ];
+  };
 
   services.syncthing = {
     enable = true;

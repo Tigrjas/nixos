@@ -16,7 +16,7 @@ binds {
     }
 
     Mod+B                               hotkey-overlay-title="Open Browser: zen-browser" {
-        spawn "zen-browser";
+        spawn "zen-beta";
     }
 
     Mod+ALT+L                           hotkey-overlay-title="Lock Screen: Noctalia" {
