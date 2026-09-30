@@ -66,11 +66,11 @@ binds {
 
     // Mod + volume knob cycles audio outputs
     Mod+XF86AudioRaiseVolume {
-        spawn "/home/jason/.local/bin/cycle-sink";
+        spawn "/home/jason/.local/bin/cycle-sink" "next";
     }
     
     Mod+XF86AudioLowerVolume {
-        spawn "/home/jason/.local/bin/cycle-sink";
+        spawn "/home/jason/.local/bin/cycle-sink" "previous";
     }
 
     // ─── Brightness Controls ───
