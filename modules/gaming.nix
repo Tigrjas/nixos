@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   hardware.graphics = {
@@ -19,8 +19,9 @@
   };
 
   environment.systemPackages = with pkgs; [
-    xwayland-satellite
     mangohud
     protonup-qt
+
+    inputs.xwayland-satellite-old.packages.${pkgs.system}.default
   ];
 }
