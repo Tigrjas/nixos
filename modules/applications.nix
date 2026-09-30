@@ -4,13 +4,16 @@
   programs.firefox.enable = true;
 
   environment.systemPackages = with pkgs; [
+    alsa-utils
     bitwarden-desktop
     brave
     discord
     kitty
+    libnotify
     libreoffice-still
     nautilus
     obsidian
+    pavucontrol
     simple-scan
     spotify
     zed-editor

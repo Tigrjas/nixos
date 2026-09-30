@@ -7,7 +7,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-
+  
     ./modules/desktop.nix
     ./modules/applications.nix
     ./modules/cli.nix
@@ -15,6 +15,7 @@
     ./modules/services.nix
     ./modules/virtualization.nix
     ./modules/gaming.nix
+    ./modules/nvidia.nix
   ];
 
   nix.settings.experimental-features = [

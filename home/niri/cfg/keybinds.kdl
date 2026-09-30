@@ -64,13 +64,13 @@ binds {
         spawn "noctalia" "msg" "media" "toggle";
     }
 
-    // Win key + volume knob (if knob sends XF86 key events)
+    // Mod + volume knob cycles audio outputs
     Mod+XF86AudioRaiseVolume {
-        spawn "bash" "-c" "/home/jason/.local/bin/cycle-sink.sh";
+        spawn "/home/jason/.local/bin/cycle-sink";
     }
-
+    
     Mod+XF86AudioLowerVolume {
-        spawn "bash" "-c" "/home/jason/.local/bin/cycle-sink.sh";
+        spawn "/home/jason/.local/bin/cycle-sink";
     }
 
     // ─── Brightness Controls ───

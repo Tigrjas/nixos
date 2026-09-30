@@ -47,5 +47,21 @@
     recursive = true;
   };
 
+  home.file.".local/bin/cycle-sink" = {
+    source = ../scripts/cycle-sink.sh;
+    executable = true;
+  };
+
+  programs.ssh = {
+    enable = true;
+  
+    matchBlocks = {
+      homeserver = {
+        hostname = "192.168.5.40";
+        user = "jason";
+      };
+    };
+  };
+
   home.stateVersion = "26.05";
 }
