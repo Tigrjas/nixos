@@ -57,6 +57,22 @@
     ];
   };
 
+  fileSystems."/mnt/games" = {
+    device = "/dev/disk/by-uuid/28b13ff5-ac15-4929-99e0-e463dbc81de4";
+    fsType = "ext4";
+    options = [ "nofail" ];
+  };
+
+  # Automatically clean old generations / unused store paths.
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+
+  # Deduplicate identical files in the Nix store.
+  nix.settings.auto-optimise-store = true;
+
   nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "26.05";
